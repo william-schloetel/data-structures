@@ -65,6 +65,11 @@ def add_helper(val, hashed_index1, hashed_index2):
 #---------- BONUS! Accuracy Assessment -----------#
 
 
+
+# Unfinished functions.
+
+# Given a certain value and the pre-existing bloom array, what is the percent accuracy of the bloom filter??
+
 def accuracy(val):
 	"""Returns the percent accracy in bloom filter decision"""
 
@@ -72,6 +77,7 @@ def accuracy(val):
 	num_hash_funcs = 2
 
 	
+
  
 
 	if len(val_arr) < 2:
