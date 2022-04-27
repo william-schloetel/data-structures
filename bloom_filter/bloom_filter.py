@@ -18,23 +18,6 @@ test_arr = ["Creg", "Simzy", "Dean", "Joan", "Zalniun", "Kerry", \
 # don't already exist in the bloom_arr
 val_arr = []
 
-
-#-------------------- The Bloom --------------------#
-
-def check_and_add(val):
-	"""Checks if value is in the bloom_arr. If not, it adds the value. 
-	If the value is in bloom_arr, it returns a message. """
-	hashed_index1 = hash1(val)
-	hashed_index2 = hash2(val, hashed_index1)
-
-	if check_helper(hashed_index1, hashed_index2):
-		print("Value '" + val + "' already exists in bloom array. Try again!")
-		return
-
-	add_helper(val, hashed_index1, hashed_index2)
-		
-
-
 #----------------- Helper Functions -----------------#
 
 def hash1(val):
@@ -61,10 +44,23 @@ def add_helper(val, hashed_index1, hashed_index2):
 	val_arr.append(val)
 
 
+#-------------------- The Bloom --------------------#
+
+def check_and_add(val):
+	"""Checks if value is in the bloom_arr. If not, it adds the value. 
+	If the value is in bloom_arr, it returns a message. """
+	hashed_index1 = hash1(val)
+	hashed_index2 = hash2(val, hashed_index1)
+
+	if check_helper(hashed_index1, hashed_index2):
+		print("Value '" + val + "' already exists in bloom array. Try again!")
+		return
+
+	add_helper(val, hashed_index1, hashed_index2)
+		
+
 
 #---------- BONUS! Accuracy Assessment -----------#
-
-
 
 # Unfinished functions.
 
