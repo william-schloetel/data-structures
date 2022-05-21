@@ -3,8 +3,8 @@
 public class SLList {		//"Singly Linked List"
 	
 	/* Nested class */
-	private static class IntNode {		//private b/c nobody needs a reference to IntNode
-		public int item;				//static b/c it never uses anything from SLList
+	private static class IntNode {		
+		public int item;				
 		public IntNode next;
 
 		public IntNode(int i, IntNode n) {
@@ -100,26 +100,6 @@ public class SLList {		//"Singly Linked List"
 	public int recurseSize() {
 		return recurseSizeHelper(sentinel);
 	}
-
-
-
-
-
-	public static void main(String[] args) {
-		SLList L = new SLList();
-		L.addFirst(20);
-		L.addFirst(15);
-		L.addFirst(10);
-		L.addFirst(5);
-		System.out.println(L.get(2));
-
-		L.insert(300, 2);
-		System.out.println(L.get(2));
-			
-		
-	}
-
-
 
 
 }
