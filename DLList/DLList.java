@@ -60,4 +60,14 @@ public class DLList {
 		size--;
 	}
 
+	public int get(int i) {
+		IntNode p = sentinel.next;
+		int j = 0;
+		while (j < i) {
+			p = p.next;
+			j++;
+		}
+		return p.item;
+	}
+
 }
