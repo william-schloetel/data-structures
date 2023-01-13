@@ -61,11 +61,7 @@ public class Trie {
 			}
 			p = child;
 		}
-		if (p.isCompleteWord) {
-			return true;
-		} else {
-			return false;
-		}
+		return p.isCompleteWord
 	}
 
 	public boolean containsPrefix(String prefix) {
